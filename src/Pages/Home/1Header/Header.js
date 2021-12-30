@@ -11,11 +11,18 @@ function Page({className=""}) {
          <div className="col text">
             <p className="title"><span className="green-color">Hi, I am</span>   Avishka Nirmitha   </p>
              <p className="description margin-t-22">
-                 A passionate Full Stack Web Developer and  experience of building Web applications with HTML / CSS / JavaScript / Reactjs
-                 A passionate Full Stack Web Developer and  experience of building Web applications with HTML / CSS / JavaScript / Reactjs
-                 A passionate Full Stack Web Developer and  experience of building Web applications with HTML / CSS / JavaScript / Reactjs
-                 A passionate Full Stack Web Developer and  experience of building Web applications with HTML / CSS / JavaScript / Reactjs
-                 A passionate Full Stack Web Developer and  experience of building Web applications with HTML / CSS / JavaScript / Reactjs
+                 {/* A passionate Full Stack Web Developer and  experience of building Web applications with HTML / CSS / JavaScript / Reactjs */}
+           
+                 I am Avishka. A web developer. I enjoy creating things on internet . 
+                  web development started back in 2020 . I decided learn HTML,CSS ,Javascript, 
+                  react js and node js . I build some projects using that. 
+                  (you can see it my project page) . I
+                  self study and with my hard work to satisfy my internship at your 
+                  company and also willing to learn more from this internship. 
+                  I like learn more about web development.I am looking internship for frondend development               
+          
+           
+           
              </p>
             <Button text={"see my cv "} className='btn margin-t-22'/>
         </div>
@@ -60,6 +67,7 @@ const DIV=styled.div`
 
                     .green-color{
                         color: var(--color-primary);
+                        font-size: inherit; 
                     }
                 }
 

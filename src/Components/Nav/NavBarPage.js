@@ -1,16 +1,39 @@
 import styled from 'styled-components';
 import NavItemContainer from './Nav-item-container';
 import SiteLogo from '../UI/SiteLogo';
+import {Link} from 'react-router-dom';
+import MenuIcon from '@mui/icons-material/Menu';
+
+import {ShowMobileNavFN} from './../../Redux/slices/clickSlice';
+import {useDispatch} from 'react-redux'; 
+
+
 
 
 
 function Page({className=""}) {
-  return (
-    <DIV className={`${className}`}>
-         <div className="nav-bar-wrapper">
-                <div className="left">
 
-                    <SiteLogo/>
+    const dispatch=useDispatch();
+
+
+    const handleClick=(e)=>{
+            console.log(e.target.closest(".mobile-nav-hamberg"));
+            const selectIcon=e.target.closest(".mobile-nav-hamberg");
+
+            if(selectIcon){
+                    dispatch(ShowMobileNavFN());
+            }
+    };
+
+  return (
+    <DIV className={`${className}`} onClick={handleClick}>
+         <div className="nav-bar-wrapper">
+
+                <MenuIcon className='mobile-nav-hamberg cursor-p'></MenuIcon>
+                <div className="left">
+                            <Link to="/" className='a'>
+                            <SiteLogo/>
+                    </Link>
                 </div>
                 <div className="right">
                     <NavItemContainer className='nav-item-container'/>
@@ -41,47 +64,56 @@ const DIV=styled.div`
         display: flex;
         align-items: center;
         /* justify-content: space-between; */
+     
+
+        .mobile-nav-hamberg{
+                color: var(--color-primary);
+                font-size: 42rem;
+                display: none; 
+
+                @media screen and (max-width: 981px) {   
+                        display: flex;
+                }
+        }
 
         .left{
-            /* background-color: green; */
-            /* flex-basis: 30%; */
-            .logo{
-                
-                .logo-text{
-                    font-family: augustina;      
-                    text-transform: capitalize;
-                    font-size: 24pt;
-                    font-weight: bold;
+            display: flex;
+            align-items: center; 
 
-                }
+            @media screen and (max-width: 981px) {   
+                margin-left: auto;
+                margin-right: auto;
             }
-        }
+            
+          
+            a{
+
+                
+                
+            }
+
+
+
+            }
         .right{
-            /* flex-basis:70%; */
-            /* background-color: aqua; */
             margin-left: auto;
-            /* margin-right: 50px;  */
+            
+
+            @media screen and (max-width: 981px) {   
+       
+                display: none;   
+            }
 
             .nav-item-container{
-                /* width: 100%; */
                 nav{
-                    /* width: 80%; */
-                    /* margin-left: auto; */
-
-                    /* background-color: grey; */
-                    /* margin: 0 auto; */
-                    /* justify-content: space-between; */
                     
                     li{
                         margin-left: 50px;
-                        font-size: 13pt;
+                        /* font-size: 13pt; */
+                        font-size: var(--nav-list-font-size);
                         font-weight: bold;
 
-                        &:first-child{ 
-                            color: var(--color-primary);
-                            /* background:aqua;  */
-                            /* font-weight: bold; */
-                        }
+      
                     }
                 }
             }

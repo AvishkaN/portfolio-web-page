@@ -33,10 +33,23 @@ const DIV=styled.div`
                     font-size: 24pt;
                     font-weight: bold;
                     margin-top: -17px;
-                    transition:all .2s; 
 
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        background-image: linear-gradient(
+                            to left,
+                            var(--color-black), 
+                            var(--color-black) 50%,
+                            var(--color-primary) 50%
+                        );
+                        background-size: 200% 100%;
+                        background-position: -100%;
+                        transition: all 0.3s ease-in-out;
 
-                  
+                        &:hover {
+                            background-position: 0%;
+                        
+                        }
 
                 }
             }

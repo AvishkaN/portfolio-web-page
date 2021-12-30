@@ -39,10 +39,12 @@ html{
     overflow-x: hidden;   
     font-family: Montserrat;      
     box-sizing: border-box;
+    font-size: 18rem; 
 }
 
 :root {
     --color-primary: #27AE60;
+    --color-secondary: #8D6767;
     --color-white: #fff;
     --color-black: #000;  
 
@@ -54,7 +56,10 @@ html{
     --nav-footer-background: #f4f4f4;
 
     /* NAV */
+    --nav-list-font-size:18rem;
 
+    /* PAGES */
+    --margin-top-fix-nav:110px;  /*because nav bar position fixed  */ 
 
     /* Home page  
             
@@ -70,13 +75,32 @@ html{
             
             --margin-t-42:42rem;
             --margin-section-t:120rem;
+
+            /* ABOUTME PAGE */
+
+            /* BLOG PAGE */
+
+            /* PROJECTS  PAGE */
+            --inside-section-margin-t:20rem;
+            --inside-project-item-box-container-margin-t:50rem;
+            --inside-section-description-description:24rem;
+
+            --single-project-section-margin-top:20rem;
+
+            --single-project-section-width:80%;
     
 
     /* FOOTER */
 
         --footer-margin-t:80rem;
 
-}
+
+        --test:20px; 
+
+    }
+
+  
+
 
 .margin-t-22{
     margin-top: var(--margin-t-22);
@@ -84,8 +108,11 @@ html{
 
 body{
     font-size: 18rem;
+
     
 }
+
+
 
 
 h1{   
@@ -147,4 +174,13 @@ h1{
       background-color: var(--color-primary);
     color:var(--color-white) ;
     transition: all .1s; 
+}
+
+
+
+@media screen and (max-width: 981px) {   
+       
+    :root {   
+        --nav-footer-width: 90%;  
+    }
 }
