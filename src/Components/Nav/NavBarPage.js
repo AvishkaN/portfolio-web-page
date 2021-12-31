@@ -67,7 +67,7 @@ const DIV=styled.div`
      
 
         .mobile-nav-hamberg{
-                color: var(--color-primary);
+                color: var(--mobile-nav-icon);
                 font-size: 42rem;
                 display: none; 
 

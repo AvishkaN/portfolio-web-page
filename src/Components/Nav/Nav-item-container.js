@@ -9,6 +9,7 @@ function NavItemContainer({className=""}) {
                     <li><NavLink  to="/about">About Me</NavLink ></li>
                     <li><NavLink  to="/blog">Blog</NavLink ></li>
                     <li><NavLink  to="/projects">Projects</NavLink ></li>
+                    {/* <li><NavLink  to="/projects">NightMode</NavLink ></li> */}
             </nav>
     </DIV>
   );
@@ -31,7 +32,7 @@ const DIV=styled.div`
             }
 
             .active{
-              color: var(--color-primary); 
+              color: var(--color-active-class); 
               /* color: red;   */
             }
 

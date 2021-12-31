@@ -31,7 +31,7 @@ const DIV=styled.div`
             /* background-color: green; */
             border-radius: 50%;
             padding: 6rem; 
-            border:2px solid var(--color-primary); 
+            border:2px solid var(--social-media-icon-border); 
             
             &:hover{
                 background: var(--hover-color-primary-light);

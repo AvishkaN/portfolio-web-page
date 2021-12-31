@@ -16,7 +16,8 @@ function SkillSection({className=""}) {
 
 const DIV=styled.div`
     width: 100%;
-    margin-top: 100rem; 
+    /* margin-top: 100rem;  */
+    margin-top: 170rem;
 
 `;
 

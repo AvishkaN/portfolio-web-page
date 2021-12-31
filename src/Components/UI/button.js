@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
 
-
 function Singlecomponent({className="",text="this is button"}) {
   return (
     <DIV className={`${className} button`} >
          <div className="btn-wrapper">
+               
                 <button  className='button'>{text}</button>
          </div>
     </DIV>
@@ -24,7 +24,7 @@ const DIV=styled.div`
             border: 2px solid var(--color-primary);
             padding: 8px 8px; 
             text-transform: uppercase;
-            color: #512A2A;
+            color: var(--color-secondary);
             font-weight: bold;
             transition: .1s  all ;
 

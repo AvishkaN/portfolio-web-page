@@ -1,15 +1,18 @@
 import styled from 'styled-components';
+import Video from './Video';
+import SourceFile from './SourceFile';
 
 
 
-function SingleProductSection({className="",title,list=[]}) {
+function SingleProductSection({className="",title,list=[],paragraph=false,video=false,sourcefile=false}) {
   return (
     <DIV className={`${className}`}>
          <div className="single-product-section-wrapper">
                 <p className="single-product-section__title">{title}</p>
                 <div className="single-product-section__list">
 
-                        <ul>
+
+                     <ul>
                             {
                                 list.map(li=>(
 
@@ -19,6 +22,25 @@ function SingleProductSection({className="",title,list=[]}) {
                         </ul>
 
                 </div>
+
+                    {/* PARAGRAPH */}
+                     { paragraph && ( <p className='paragraph'>
+                         {paragraph}
+                        </p>)
+                    }
+
+                {/* DEMO VIDEO */}
+                {video && (
+                   <Video src="https://www.youtube.com/embed/6LvQyQvaVZs"></Video>
+                    )
+                } 
+
+                {/* SOURCEFILE VIDEO */}
+                {sourcefile && (
+                        <SourceFile className='souce-file'></SourceFile>
+                    )
+                } 
+                       
          </div>
     </DIV>
   );
@@ -49,7 +71,8 @@ const DIV=styled.div`
                 li{
                     width: 50%; 
                     font-family: Alata;
-                     font-size: var(--Alata-font);
+                    font-size: var(--Alata-font);
+                    color:var(--color-black);
 
 
                     &::before{
@@ -69,7 +92,20 @@ const DIV=styled.div`
 
         }
 
+        
     }
+    .paragraph{
+        font-family: Alata;
+        font-size: var(--Alata-font);
+        color:var(--color-black);
+
+    }
+
+    .souce-file{
+        width: 50%; 
+    }
+
+
 `;
 
 export default SingleProductSection;

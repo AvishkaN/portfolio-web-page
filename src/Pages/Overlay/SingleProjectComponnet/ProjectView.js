@@ -52,7 +52,7 @@ const DIV=styled.div`
                 iframe{
                     border-radius: 20px; 
                     overflow-y: hidden; 
-                    border:3px solid var(--color-primary);
+                    border:var(--iframe-border);
 
 
                     width: 100%; 

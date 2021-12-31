@@ -27,7 +27,7 @@ function Footer({className=""}) {
 
 const DIV=styled.div`
     width: 100%;
-    background-color: #80808026; 
+    background-color: var(--nav-footer-background); 
     margin-top:var(--footer-margin-t);
     
     
@@ -50,6 +50,10 @@ const DIV=styled.div`
         
       }
       .footer-text{
+        p{
+          color:var(--color-black);
+
+        }
         
         /* background-color: aqua; */
       }

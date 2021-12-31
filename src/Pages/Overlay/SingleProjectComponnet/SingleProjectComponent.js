@@ -28,6 +28,7 @@ const DIV=styled.div`
     margin-left: auto;
     margin-right: auto;
     background: var(--color-white);
+    border:3px solid var(--color-primary);
 
     max-height: 100vh;    
     &::-webkit-scrollbar {  // hide scrollbar

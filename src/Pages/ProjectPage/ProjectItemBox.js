@@ -49,7 +49,7 @@ const DIV=styled.div`
      
 
             .project-item-text{
-                color: var(--color-white); 
+                color: var(--project-item-box-text); 
                 font-weight: bold;
                font-size: 20rem;
 

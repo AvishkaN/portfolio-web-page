@@ -30,7 +30,8 @@ const DIV=styled.div`
         }
 
         .circle{
-            border: 1px solid #000;
+            border: 3px solid var(--color-primary);
+            background: #fff; 
             width: 120rem;
             display: flex;
             justify-content: center; 

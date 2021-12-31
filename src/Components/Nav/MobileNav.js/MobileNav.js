@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import NavItemConatiner from '../Nav-item-container';
+import NightModeIcon from '../../UI/NightModeIcon';
 
 
 
@@ -7,8 +8,10 @@ function NavMobile({className=""}) {
   return (
     <DIV className={`${className} NavMobile000`}>
          <div className="NavMobile-wrapper">
-                <NavItemConatiner className='mobile-nav'></NavItemConatiner>
-                dfsddf
+
+             <NightModeIcon className='nightModeIcon'></NightModeIcon>
+
+            <NavItemConatiner className='mobile-nav'></NavItemConatiner>
          </div>
     </DIV>
   );
@@ -17,11 +20,40 @@ function NavMobile({className=""}) {
 
 const DIV=styled.div`
     width: 30%;
-    /* transform: translateX(-140%); */
     transition: all .2s;
+    position: relative;
     
-    /* background: aqua;  */
-    /* margin-top: var(--margin-top-fix-nav);  */  /*only NavMobile */
+
+    .nightModeIcon{
+        position: absolute; 
+        /* background: aqua;  */
+        bottom: 9%;
+        right: 5%; 
+
+
+    
+    
+    .NIghtMode-wrapper{     
+     
+        
+        /* margin-right: 50%;  */
+        overflow-y: hidden;
+        /* background: var(--color-white);   */
+          
+
+        .night-mode-icon{
+            width: 45rem;  
+            height: 60rem;  
+            margin-right: auto;     
+            transform: rotate(36deg);
+            fill:var(--color-black);  
+            /* fill:red;    */
+
+        }
+
+    }
+
+    }
     
     .NavMobile-wrapper{
         min-height: 100vh; 
@@ -69,6 +101,12 @@ const DIV=styled.div`
                         }
                     }
 
+        }
+
+        .night-mode{
+            position: absolute;
+            bottom: 10%;   
+            right: 10%; 
         }
 
     }

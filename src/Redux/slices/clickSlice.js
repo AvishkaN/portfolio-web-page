@@ -6,6 +6,8 @@ export const clickSlice=createSlice({
         showOverlay:false, 
         showSingleProjectComponent:false, 
         showMobileNav:false, 
+        nightMode:false, 
+
 
     },
     reducers:{
@@ -25,12 +27,16 @@ export const clickSlice=createSlice({
             state.showSingleProjectComponent=false;
 
         },
+        TurnOnOFFNigtModeFN:(state)=>{
+            state.nightMode=!state.nightMode;
+
+        },
     }
 });
 
 
 
-export const {ShowSingleProjectComponentFN,AllComponentHideFN,ShowMobileNavFN} =clickSlice.actions; 
+export const {ShowSingleProjectComponentFN,AllComponentHideFN,ShowMobileNavFN,TurnOnOFFNigtModeFN} =clickSlice.actions; 
 
 //selectors
 export const selectClicks=(state)=>state.clicks;
