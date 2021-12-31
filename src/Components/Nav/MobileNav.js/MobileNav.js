@@ -22,6 +22,10 @@ const DIV=styled.div`
     width: 30%;
     transition: all .2s;
     position: relative;
+
+    @media(max-width:600px){
+        width: 43%;  
+    }
     
 
     .nightModeIcon{

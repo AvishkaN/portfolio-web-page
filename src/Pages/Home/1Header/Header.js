@@ -44,11 +44,7 @@ function  Page({className=""}) {
 
 const DIV=styled.div`
     width: 100%;
-    /* margin-top: 55px; */
     margin-top: 110px;
-    /* margin-bottom: var(--margin-b-90); */
-    /* background-color: green;  */
-    /* min-height: 100vh;  */
 
     
     .header-wrapper{
@@ -59,6 +55,10 @@ const DIV=styled.div`
         justify-content: space-between; 
         align-items: center;
 
+        @media(max-width:1103px){
+            flex-direction: column-reverse;
+        }
+
 
         .text{
             flex-basis: 60%;
@@ -68,7 +68,11 @@ const DIV=styled.div`
                     font-size: var(--font-size-title);
                     font-weight: bold;
                     color:var(--color-black);
-                    /* margin-top: 55px; */
+
+
+                     @media(max-width:750px){  
+                            text-align:center; 
+                        }
 
 
                     .green-color{
@@ -82,6 +86,10 @@ const DIV=styled.div`
                      /* font-size: 22rem; */
                      font-size: var(--Alata-font);
                      color: var(--color-black);
+
+                     @media(max-width:750px){
+                            text-align:center; 
+                    }
 
 
                 }
