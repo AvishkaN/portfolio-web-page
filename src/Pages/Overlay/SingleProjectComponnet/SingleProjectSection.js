@@ -103,6 +103,10 @@ const DIV=styled.div`
 
     .souce-file{
         width: 50%; 
+
+        @media(max-width:987px){
+            width: 99%; 
+        }
     }
 
 

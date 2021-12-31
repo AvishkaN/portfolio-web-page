@@ -19,11 +19,16 @@ function SingleProjectComponent({className=""}) {
 
 
 const DIV=styled.div`
-    width: 100%;
+    /* width: 100%; */
     /* margin-top: var(--margin-top-fix-nav);  */  /*only SingleProjectComponent */
     margin-top: 50rem; 
     width: 70%;
     border-radius: 20px;  
+
+    @media(max-width:673px){
+        margin-top: 6rem;
+        width: 97%;
+    }
     
     margin-left: auto;
     margin-right: auto;

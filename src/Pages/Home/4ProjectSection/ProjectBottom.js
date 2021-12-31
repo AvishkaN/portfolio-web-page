@@ -24,6 +24,14 @@ const DIV=styled.div`
 
       .project-btn{
         width: 30%; 
+
+        @media(max-width:710px){
+            
+          width: 75%;
+          margin-left: auto;
+          margin-right: auto;
+
+         }
       }
     }
 `;

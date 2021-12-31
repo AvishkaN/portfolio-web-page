@@ -32,6 +32,18 @@ const DIV=styled.div`
                /* background-color: red;  */
                display: flex;   
                 justify-content:space-between; 
+
+                @media(max-width:688px){
+                    /* flex-direction: column; */
+                    /* width: 50%;  */
+                    flex-wrap: wrap; 
+                    /* justify-content: center;  */
+                    justify-content: space-around; 
+
+                    &>*{
+                        width: 50%; 
+                    }
+                }
             }
 
         }

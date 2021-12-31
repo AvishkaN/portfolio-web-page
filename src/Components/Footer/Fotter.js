@@ -41,6 +41,17 @@ const DIV=styled.div`
       padding-top: 20px;  
       padding-bottom: 20px;     
       
+
+      @media(max-width:1160px){
+          flex-direction: column; 
+
+          &>*{
+            
+            
+            margin-top: 8rem;
+
+          }
+    }
       
       
       

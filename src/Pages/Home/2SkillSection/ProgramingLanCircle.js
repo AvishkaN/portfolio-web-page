@@ -24,6 +24,10 @@ const DIV=styled.div`
         display: flex;
         justify-content: flex-start;
         /* background-color: red;  */
+
+        @media(max-width:688px){
+            justify-content: center; 
+        }
         
         &:last-child{
             /* background-color: green;    */
