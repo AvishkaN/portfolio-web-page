@@ -1,14 +1,16 @@
 import styled from 'styled-components';
-import Img from '../../assets/img/image-box.png';
+// import Img from '../../assets/img/image-box.png';
 
 
 
-function ProjectItem({className="",ProjectName}) {
+function ProjectItem({className="",ProjectName,backgroundImage}) {
   return (
-    <DIV className={`${className} cursor-p    project-item-boxx`}>
+    <DIV className={`${className} cursor-p    project-item-boxx`}  backgroundImage='https://raw.githubusercontent.com/AvishkaN/portfolio-web-page/master/src/assets/img/1-EcommerceProjectImage.png'>
+        
+            {console.log( backgroundImage)}
          <div className="project-item-box-wrapper">
                     <p className="project-item-text">
-                       {ProjectName}
+                       {ProjectName} 
                     </p>
 
          </div>
@@ -40,7 +42,7 @@ const DIV=styled.div`
         align-items: center; 
 
 
-        background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(0,0,0,0.5)), to(rgba(0,0,0,0.5))),url(${Img});
+        background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(0,0,0,0.5)), to(rgba(0,0,0,0.5))),url(${(props) => props.backgroundImage});
 
         background-size: cover;
         background-repeat: no-repeat;

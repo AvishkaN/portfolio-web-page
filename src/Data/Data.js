@@ -2,7 +2,7 @@ const obj=[
     {
         id:'1'+Math.random(),
         name:"E commerce Project",
-        backgroundImage:"",
+        backgroundImage:"https://raw.githubusercontent.com/AvishkaN/portfolio-web-page/master/src/assets/img/1-EcommerceProjectImage.png",
         description:"I decide simple build e commerce web app",
         sections:[
             {
