@@ -3,10 +3,11 @@ import Video from './Video';
 import SourceFile from './SourceFile';
 // import ProjectView from './../SingleProjectComponnet/ProjectView';
 import ProjectView2 from './ProjectView2';
+import ProgressBar from '../../../Components/UI/ProgressBar';
 
 
 
-function SingleProductSection({className="",title,list=[],paragraph=false,video=false,videoLink,sourcefile=false,sourceFileLink,ProjectView=false,ProjectViewLink}) {
+function SingleProductSection({className="",title,list=[],paragraph=false,video=false,videoLink,sourcefile=false,sourceFileLink,ProjectView=false,ProjectViewLink,showProgress=false,ProgressPercentage}) {
   return (
     <DIV className={`${className}`}>
         {console.log()}
@@ -43,11 +44,12 @@ function SingleProductSection({className="",title,list=[],paragraph=false,video=
 
                 {/* SOURCEFILE VIDEO */}
                 {sourcefile && (
-                        <SourceFile className='souce-file' sourceFileLink={sourceFileLink}></SourceFile>
+                    <SourceFile className='souce-file' sourceFileLink={sourceFileLink}></SourceFile>
                     )
                 } 
 
-                {/* <ProjectView></ProjectView> */}
+                {/*  PROGRESS BAR */}
+               {showProgress && <ProgressBar ProgressPercentage={ProgressPercentage}></ProgressBar>}
                        
          </div>
     </DIV>

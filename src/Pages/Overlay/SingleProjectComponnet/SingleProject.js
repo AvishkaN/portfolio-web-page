@@ -16,8 +16,8 @@ function SingleProduct({className=""}) {
     <DIV className={`${className}`}>
         {console.log(userClick)}
          <div className="singleProduct-wrapper">
-                <p className="p-single-product__title">{userClick.SelectedProject.name} (building 🏗)</p>
-                <p className="p-single-product__desciption">{userClick.SelectedProject.description}   </p>
+                <p className="p-single-product__title">{userClick.SelectedProject?.name }{( userClick.SelectedProject?.IsBuilding && "  (building 🏗)")}  </p>
+                <p className="p-single-product__desciption">{userClick.SelectedProject?.description}   </p>
                 
                 {/* 
                 <SingleProjectSection className='SingleProductSection' title={"What technologies I use for this ?"} list={["React js","styled component","react redux","pwa","firebase firestore","firebase storage","firebase auth "]}></SingleProjectSection>
@@ -33,7 +33,7 @@ function SingleProduct({className=""}) {
                         console.log(section);
                         console.log(section.videoLink);
                         return(
-                        <SingleProjectSection key={section.title} className='SingleProductSection' title={section.title}  list={section.list}  paragraph={section.paragraph} video={section.video} videoLink={section.videoLink} sourcefile={section.sourcefile} sourceFileLink={section.sourceFileLink} ProjectView={section.ProjectView}  ProjectViewLink={section.ProjectViewLink}></SingleProjectSection>
+                        <SingleProjectSection key={section.title} className='SingleProductSection' title={section?.title}  list={section?.list}  paragraph={section?.paragraph} video={section?.video} videoLink={section?.videoLink} sourcefile={section?.sourcefile} sourceFileLink={section?.sourceFileLink} ProjectView={section?.ProjectView}  ProjectViewLink={section?.ProjectViewLink} showProgress={section?.showProgress} ProgressPercentage={section?.ProgressPercentage}></SingleProjectSection>
                         
                     )})
                 }
