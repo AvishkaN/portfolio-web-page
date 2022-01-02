@@ -5,7 +5,7 @@ import styled from 'styled-components';
 
 function ProjectItem({className="",ProjectName,backgroundImage}) {
   return (
-    <DIV className={`${className} cursor-p    project-item-boxx`}  backgroundImage='https://raw.githubusercontent.com/AvishkaN/portfolio-web-page/master/src/assets/img/1-EcommerceProjectImage.png'>
+    <DIV className={`${className} cursor-p    project-item-boxx`}  backgroundImage={backgroundImage}>
         
             {console.log( backgroundImage)}
          <div className="project-item-box-wrapper">

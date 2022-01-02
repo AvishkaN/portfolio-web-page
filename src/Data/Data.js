@@ -69,6 +69,8 @@ const obj=[
         id:'2'+Math.random(),
         name:"Linkedin Clone",
         description:"I decide simple build Linkedin Clone",
+        backgroundImage:"https://raw.githubusercontent.com/AvishkaN/portfolio-web-page/master/src/assets/img/2-LinkedinCLoneProject.png",
+
         sections:[
             {
                 title:"What technologies I use for this ?",
