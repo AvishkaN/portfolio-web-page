@@ -1,16 +1,22 @@
 import styled from 'styled-components';
 import Video from './Video';
 import SourceFile from './SourceFile';
+// import ProjectView from './../SingleProjectComponnet/ProjectView';
+import ProjectView2 from './ProjectView2';
 
 
 
-function SingleProductSection({className="",title,list=[],paragraph=false,video=false,sourcefile=false}) {
+function SingleProductSection({className="",title,list=[],paragraph=false,video=false,videoLink,sourcefile=false,sourceFileLink,ProjectView=false,ProjectViewLink}) {
   return (
     <DIV className={`${className}`}>
+        {console.log()}
          <div className="single-product-section-wrapper">
                 <p className="single-product-section__title">{title}</p>
                 <div className="single-product-section__list">
 
+                      {/* PROJECT VIEW */}
+                        {ProjectView && <ProjectView2 iframeLink={ProjectViewLink}></ProjectView2>} 
+                         
 
                      <ul>
                             {
@@ -31,15 +37,17 @@ function SingleProductSection({className="",title,list=[],paragraph=false,video=
 
                 {/* DEMO VIDEO */}
                 {video && (
-                   <Video src="https://www.youtube.com/embed/6LvQyQvaVZs"></Video>
+                   <Video src={videoLink}></Video>
                     )
                 } 
 
                 {/* SOURCEFILE VIDEO */}
                 {sourcefile && (
-                        <SourceFile className='souce-file'></SourceFile>
+                        <SourceFile className='souce-file' sourceFileLink={sourceFileLink}></SourceFile>
                     )
                 } 
+
+                {/* <ProjectView></ProjectView> */}
                        
          </div>
     </DIV>

@@ -7,7 +7,7 @@ function ProjectView({className="",iframeLink="https://goofy-curie-a15ec3.netlif
   return (
     <DIV className={`${className}`}>
          <div className="ProjectView-wrapper">
-                <div className="project-view__title">Project View</div>
+                {/* <div className="project-view__title">Project View</div> */}
 
                 <a href={iframeLink} target="_blank" >
 
@@ -24,12 +24,13 @@ function ProjectView({className="",iframeLink="https://goofy-curie-a15ec3.netlif
 
 const DIV=styled.div`
     width: 100%;
-    margin-top: 40rem;    
+    margin-top: 10rem;    
     margin-bottom: 60rem;    
     /* margin-top: var(--margin-top-fix-nav);  */  /*only ProjectView */
     
     .ProjectView-wrapper{
-        width: var( --single-project-section-width);
+        /* width: var( --single-project-section-width); */
+        width: 100%; 
         margin-left: auto;
         margin-right: auto;
 

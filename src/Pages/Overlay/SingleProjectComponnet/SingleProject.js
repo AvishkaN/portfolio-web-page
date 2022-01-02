@@ -1,22 +1,43 @@
 import styled from 'styled-components';
 import SingleProjectSection from './SingleProjectSection';
-import ProjectView from './ProjectView';
+// import ProjectView from './ProjectView';
+
+import {selectClicks} from './../../../Redux/slices/clickSlice';
+import {useSelector } from 'react-redux';
 
 
+function SingleProduct({className=""}) {
 
-function singleProduct({className=""}) {
+
+    const userClick=useSelector(selectClicks);
+
+
   return (
     <DIV className={`${className}`}>
+        {console.log(userClick)}
          <div className="singleProduct-wrapper">
-                <p className="p-single-product__title">E commerce Project (building 🏗)</p>
-                <p className="p-single-product__desciption">I decide simple build e commerce  web app  </p>
+                <p className="p-single-product__title">{userClick.SelectedProject.name} (building 🏗)</p>
+                <p className="p-single-product__desciption">{userClick.SelectedProject.description}   </p>
+                
+                {/* 
                 <SingleProjectSection className='SingleProductSection' title={"What technologies I use for this ?"} list={["React js","styled component","react redux","pwa","firebase firestore","firebase storage","firebase auth "]}></SingleProjectSection>
                 <SingleProjectSection className='SingleProductSection' title={"What features this project have ? "} list={["sign in / sign up / log out","log in with google","log in with twitter","cart add/ remove","wishlistg add/remove","file uploading ","buy product ","responsive design","product add"]}></SingleProjectSection>
                 <SingleProjectSection className='SingleProductSection' title={"Project Description"} list={[]} paragraph={"   Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, totam doloribus eius ea laudantium provident ut? Laudantium modi aliquid harum nostrum fugit nulla tenetur cum asperiores, numquam aliquam soluta ullam impedit doloribus quasi dignissimos odio velit ab delectus temporibus blanditiis nobis in. Voluptatibus minima non numquam obcaecati, beata"} ></SingleProjectSection>
                 <SingleProjectSection className='SingleProductSection' title={"Project "} list={["sign in / sign up / log out","log in with google","log in with twitter","cart add/ remove","wishlistg add/remove","file uploading ","buy product ","responsive design","product add"]}></SingleProjectSection>
                 <SingleProjectSection className='SingleProductSection' title={"Project Demo Video"} list={[]} paragraph={""}  video={true}></SingleProjectSection>
                 <SingleProjectSection className='SingleProductSection' title={"Source File"} list={[]} paragraph={""} sourcefile={true}></SingleProjectSection>
-                <ProjectView></ProjectView>
+                 .
+                 */}
+                {
+                    userClick.SelectedProject.sections.map(section=>{
+                        console.log(section);
+                        console.log(section.videoLink);
+                        return(
+                        <SingleProjectSection key={section.title} className='SingleProductSection' title={section.title}  list={section.list}  paragraph={section.paragraph} video={section.video} videoLink={section.videoLink} sourcefile={section.sourcefile} sourceFileLink={section.sourceFileLink} ProjectView={section.ProjectView}  ProjectViewLink={section.ProjectViewLink}></SingleProjectSection>
+                        
+                    )})
+                }
+                
          </div>
     </DIV>
   );
@@ -64,4 +85,4 @@ const DIV=styled.div`
     }
 `;
 
-export default singleProduct;
+export default SingleProduct;

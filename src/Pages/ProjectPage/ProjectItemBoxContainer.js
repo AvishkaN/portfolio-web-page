@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import ProjectItemBox from './ProjectItemBox';
+import Data from './../../Data/Data';
 
 
 
@@ -7,9 +8,10 @@ function ProjectItemBoxContainer({className=""}) {
   return (
     <DIV className={`${className}`}>
          <div className="ProjectItemBoxContainer-wrapper">
-                <ProjectItemBox></ProjectItemBox>
-                <ProjectItemBox></ProjectItemBox>
-                <ProjectItemBox></ProjectItemBox>
+                {Data.map(project=>(
+                    <ProjectItemBox key={project.id} className={project.id} ProjectName={project.name}></ProjectItemBox>
+                ))
+                }
                 {/* 
                 <ProjectItemBox></ProjectItemBox>
                 <ProjectItemBox></ProjectItemBox> */}

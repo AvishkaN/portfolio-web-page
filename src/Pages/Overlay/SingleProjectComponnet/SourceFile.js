@@ -5,12 +5,15 @@ import GithubLogo from '../../../assets/svg/social-media/github.svg';
 
 
 
-function SourceFileSection({className=""}) {
+function SourceFileSection({className="",sourceFileLink}) {
   return (
     <DIV className={`${className}`}>
          <div className="SourceFileSection-wrapper">
                 <img className='github-logo' src={GithubLogo} alt="" />
-                <Button text={"Open github repo"}></Button>
+                <a href={sourceFileLink}>
+                  
+                  <Button text={"Open github repo"} ></Button>
+                </a>
          </div>
     </DIV>
   );

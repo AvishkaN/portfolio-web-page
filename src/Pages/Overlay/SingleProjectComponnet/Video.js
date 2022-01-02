@@ -7,7 +7,7 @@ function Video({className="",src}) {
     <DIV className={`${className}`}>
          <div className="Video-wrapper">
              <div className="iframe">
-                <iframe src={src} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allow="fullscreen;"></iframe>
+             <iframe src={src} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allow="fullscreen;"></iframe>
              </div>
 
          </div>

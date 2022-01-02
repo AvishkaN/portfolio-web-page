@@ -179,13 +179,13 @@ h1{
 
 ::-moz-selection { /* Code for Firefox */
     background-color: var(--color-primary);
-    color: var(--color-white);
+    color: #ffff; 
     transition: all .1s; 
 }
 
 ::selection {
       background-color: var(--color-primary);
-    color:var(--color-white) ;
+    color:#ffff ;   
     transition: all .1s; 
 }
 

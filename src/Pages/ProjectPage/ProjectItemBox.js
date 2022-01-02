@@ -3,12 +3,12 @@ import Img from '../../assets/img/image-box.png';
 
 
 
-function ProjectItem({className=""}) {
+function ProjectItem({className="",ProjectName}) {
   return (
-    <DIV className={`${className} cursor-p`}>
+    <DIV className={`${className} cursor-p    project-item-boxx`}>
          <div className="project-item-box-wrapper">
                     <p className="project-item-text">
-                        E commerce Project
+                       {ProjectName}
                     </p>
 
          </div>

@@ -7,6 +7,7 @@ export const clickSlice=createSlice({
         showSingleProjectComponent:false, 
         showMobileNav:false, 
         nightMode:false, 
+        SelectedProject:null, 
 
 
     },
@@ -31,12 +32,16 @@ export const clickSlice=createSlice({
             state.nightMode=!state.nightMode;
 
         },
+        SelectProject:(state,action)=>{
+            state.SelectedProject=action.payload;
+
+        },
     }
 });
 
 
 
-export const {ShowSingleProjectComponentFN,AllComponentHideFN,ShowMobileNavFN,TurnOnOFFNigtModeFN} =clickSlice.actions; 
+export const {ShowSingleProjectComponentFN,AllComponentHideFN,ShowMobileNavFN,TurnOnOFFNigtModeFN,SelectProject} =clickSlice.actions; 
 
 //selectors
 export const selectClicks=(state)=>state.clicks;
