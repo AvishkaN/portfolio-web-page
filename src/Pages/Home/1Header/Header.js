@@ -13,7 +13,7 @@ function  Page({className=""}) {
              <p className="description margin-t-22">
                  {/* A passionate Full Stack Web Developer and  experience of building Web applications with HTML / CSS / JavaScript / Reactjs */}
            
-                 I am Avishka. A web developer. I enjoy creating things on internet . 
+                 I am Avishka Nirmitha. A web developer. I enjoy creating things on internet . 
                   web development started back in 2020 . I decided learn 
                   <span className='high-light-text'> HTML</span> ,
                   <span className='high-light-text'>CSS</span> ,
