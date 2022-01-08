@@ -14,11 +14,12 @@ function SocialMediaConatiner({className=""}) {
   return (
     <DIV className={`${className}`}>
          <div className="social-media-container-wrapper">
-                <SocialMediaIcon svg={LinkedLogo}/>
-                <SocialMediaIcon svg={GithubLogo}/>
-                <SocialMediaIcon svg={TwitterLogo}/>
-                <SocialMediaIcon svg={FacebookLogo}/>
-                <SocialMediaIcon svg={InstagramLogo}/>
+
+                <SocialMediaIcon svg={LinkedLogo} socialMediaIcon="linkedin"  link="https://www.linkedin.com/in/avishka-nirmitha-9b4b11218/"/>
+                <SocialMediaIcon svg={GithubLogo}  socialMediaIcon="github" link="https://github.com/AvishkaN"/>
+                <SocialMediaIcon svg={TwitterLogo} socialMediaIcon="twitter" link="https://twitter.com/ANirmitha"/>
+                <SocialMediaIcon svg={FacebookLogo} socialMediaIcon="facebook" link="https://www.facebook.com/avishka.nirmitha/"/>
+                <SocialMediaIcon svg={InstagramLogo} socialMediaIcon="instagram" link="https://www.instagram.com/avishka_nirmitha/"/>
          </div>
     </DIV>
   );
