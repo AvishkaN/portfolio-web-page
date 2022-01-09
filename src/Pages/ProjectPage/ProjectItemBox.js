@@ -27,6 +27,7 @@ const DIV=styled.div`
     height: 240rem;  
     /* background: green; */
     margin-bottom: 40rem; 
+    border:4px solid var(--color-primary);       
 
     &:hover{
         /* box-shadow: -2px 4px var(--color-primary); */

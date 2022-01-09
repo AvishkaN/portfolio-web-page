@@ -3,7 +3,7 @@ import ProjectItemBoxsContainer from './ProjectItemBoxContainer';
 
 
 
-function ProjectSection({className="",text="Projects",description="dfgdg"}) {
+function ProjectSection({className="",text="Projects",description=""}) {
   return (
     <DIV className={`${className}`}>
          <div className="ProjectSection-wrapper">
