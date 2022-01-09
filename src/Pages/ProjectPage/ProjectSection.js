@@ -3,7 +3,7 @@ import ProjectItemBoxsContainer from './ProjectItemBoxContainer';
 
 
 
-function ProjectSection({className="",text="Projects",description=""}) {
+function ProjectSection({className="",text="Projects",description="",Data}) {
   return (
     <DIV className={`${className}`}>
          <div className="ProjectSection-wrapper">
@@ -15,7 +15,7 @@ function ProjectSection({className="",text="Projects",description=""}) {
                 {description}
              </p>)
              }
-            <ProjectItemBoxsContainer  className='project-item-box-container'></ProjectItemBoxsContainer>
+            <ProjectItemBoxsContainer  Data={Data} className='project-item-box-container'></ProjectItemBoxsContainer>
 
          </div>
     </DIV>
@@ -30,7 +30,7 @@ const DIV=styled.div`
     .ProjectSection-wrapper{
 
         .project-section-text{
-            text-transform: uppercase;
+            text-transform: capitalize;  
             font-size: var(--font-size-title);
            
             font-weight: bold;

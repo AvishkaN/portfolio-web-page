@@ -1,11 +1,12 @@
 import styled from 'styled-components';
 import ProjectItemBox from './ProjectItemBox';
 import Data from './../../Data/Data';
+import CourseProjectData from './../../Data/CourseProjectData';
 import SingleProduct from '../Overlay/SingleProjectComponnet/SingleProject';
 
 
 
-function ProjectItemBoxContainer({className=""}) {
+function ProjectItemBoxContainer({className="",Data}) {
   return (
     <DIV className={`${className}`}>
          <div className="ProjectItemBoxContainer-wrapper">
@@ -14,9 +15,8 @@ function ProjectItemBoxContainer({className=""}) {
                     <ProjectItemBox key={project.id} className={project.id}  backgroundImage={project.backgroundImage} ProjectName={project.name}></ProjectItemBox>
                 )})
                 }
-                {/* 
-                <ProjectItemBox></ProjectItemBox>
-                <ProjectItemBox></ProjectItemBox> */}
+         
+
          </div>
     </DIV>
   );

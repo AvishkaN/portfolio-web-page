@@ -5,6 +5,7 @@ import HomePage from './Pages/Home/HomePage';
 import Nav from './Components/Nav/NavBarPage';
 import AboutPage from './Pages/AboutPage/AboutPage';
 import ProjectPage from './Pages/ProjectPage/ProjectPage';
+import BlogPage from './Pages/BlogPage/BlogPage';
 import Fotter from './Components/Footer/Fotter';
 
 
@@ -97,6 +98,7 @@ function App() {
                         <Routes>
                                     <Route path="/" element={ <HomePage></HomePage>} />
                                     <Route path="about" element={<AboutPage></AboutPage>} />
+                                    <Route path="blog" element={<BlogPage></BlogPage>} />
                                     <Route path="projects" element={<ProjectPage></ProjectPage>} />
                         </Routes>
                 </div>

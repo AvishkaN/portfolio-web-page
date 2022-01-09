@@ -50,6 +50,8 @@ const DIV=styled.div`
     top: 0;
     left: 0; 
     z-index: 500;
+
+    overflow-y: hidden;  
     
     .overlay-wrapper{
 
